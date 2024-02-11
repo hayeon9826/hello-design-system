@@ -1,7 +1,7 @@
-### hello-design-system
-- This package provides simple design system components for React projects.
+## hello-design-system
+This package provides simple design system components for React projects.
 
-### Installation
+## Installation
 Install the package in your project directory with:
 
 ```
