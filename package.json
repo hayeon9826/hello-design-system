@@ -1,11 +1,15 @@
 {
   "name": "hello-design-system",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hello Design System UI Components",
   "main": "./build/index.js",
   "author": "",
   "license": "UNLICENSED",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hayeon9826/hello-design-system"
+  },
   "scripts": {
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
