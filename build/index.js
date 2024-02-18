@@ -153,7 +153,7 @@ var ButtonVariable = {
     PrimaryOutline: "bg-white border-rose-500 border hover:bg-rose-500/5 text-rose-500 disabled:bg-gray-300",
     Black: "bg-black hover:bg-black/60 text-white disabled:bg-gray-300",
     BlackOutline: "bg-white border border-black hover:bg-black/5 text-black disabled:bg-gray-300",
-    Gray: "bg-gray-300 hover:bg-gray-400 disabled:bg-gray-200",
+    Gray: "bg-gray-400 hover:bg-gray-500 text-white disabled:bg-gray-200",
 };
 var ButtonTypeStyle = (_a = {},
     _a[ButtonType.PRIMARY_LARGE] = cn(ButtonVariable.Primay, ButtonVariable.Large, ButtonVariable.RoundedMd),
@@ -182,5 +182,5 @@ var Button = function (_a) {
     return (jsx("button", __assign({ type: "button", disabled: disabled, className: cn(ButtonStyle, className) }, props, { children: label })));
 };
 
-export { Button };
+export { Button, ButtonType, ButtonTypeStyle, ButtonVariable };
 //# sourceMappingURL=index.js.map
