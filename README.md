@@ -1,13 +1,29 @@
 ## hello-design-system
-This package provides simple design system components for React projects.
+
+This package provides tailwind design system components for React projects.
 
 ## Installation
-Install the package in your project directory with:
+
+You need Node.js and Tailwind CSS installed.
+
+1.  Install the package in your project directory with:
 
 ```
 // with npm
-npm install hello-design-system
+npm install -D hello-design-system
 
 // with yarn
-yarn add hello-design-system
+yarn add --dev hello-design-system
+```
+
+2. Then add hello-design-system to your `tailwind.config.js` files:
+
+```typescript
+module.exports = {
+  //...
+  content: [
+    // ...
+    "./node_modules/hello-design-system/**/*.{js,jsx,ts,tsx}",
+  ],
+};
 ```
