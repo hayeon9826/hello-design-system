@@ -12,13 +12,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react",
-    "typeRoots": [
-      "src/@types",
-      "node_modules/@types",
-    ],
+    "jsx": "react-jsx",
+    "typeRoots": ["node_modules/@types"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"]
     }
   },
   "include": ["src", "public", ".storybook"],

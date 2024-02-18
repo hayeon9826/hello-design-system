@@ -1,2 +1,1 @@
-declare function HelloWorld(): void;
-export default HelloWorld;
+export * from "./components";
