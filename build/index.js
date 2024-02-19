@@ -1,4 +1,4 @@
-import { jsx } from 'react/jsx-runtime';
+import { jsx, jsxs } from 'react/jsx-runtime';
 import { useMemo } from 'react';
 
 /******************************************************************************
@@ -182,5 +182,16 @@ var Button = function (_a) {
     return (jsx("button", __assign({ type: "button", disabled: disabled, className: cn(ButtonStyle, className) }, props, { children: label })));
 };
 
-export { Button, ButtonType, ButtonTypeStyle, ButtonVariable };
+function TextInput(_a) {
+    var label = _a.label, message = _a.message, _b = _a.type, type = _b === void 0 ? "default" : _b, props = __rest(_a, ["label", "message", "type"]);
+    return (jsxs("div", { children: [!!label && (jsx("label", { htmlFor: "price", className: "block text-sm font-medium leading-6 text-gray-900", children: label })), jsx("div", { className: "relative mt-2 rounded-md", children: jsx("input", __assign({}, props, { className: cn("block w-full text-sm rounded-md border py-1.5 px-2.5 text-gray-900 outline-none placeholder:text-gray-400 placeholder:text-sm  focus:border-rose-300 sm:text-sm sm:leading-6", {
+                        "border-rose-500": type === "error",
+                    }) })) }), message && (jsx("div", { className: cn("mt-2 text-xs text-gray-500", {
+                    "!text-green-600": type === "success",
+                }, {
+                    "!text-rose-700": type === "error",
+                }), children: message }))] }));
+}
+
+export { Button, ButtonType, ButtonTypeStyle, ButtonVariable, TextInput };
 //# sourceMappingURL=index.js.map
