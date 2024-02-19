@@ -1,5 +1,5 @@
 import { ButtonType } from "./button.constant";
-interface ButtonProps {
+export interface ButtonProps {
     primary?: boolean;
     type?: ButtonType;
     label: string;
