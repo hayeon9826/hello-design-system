@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import cn from "classnames";
 import { ButtonType, ButtonTypeStyle } from "./button.constant";
 
-interface ButtonProps {
+export interface ButtonProps {
   primary?: boolean;
   type?: ButtonType;
   label: string;
