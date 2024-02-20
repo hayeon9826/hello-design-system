@@ -5,4 +5,9 @@ export {
   ButtonTypeStyle,
   ButtonVariable,
   TextInput,
+  Text,
+  TextType,
+  TextTypeStyle,
+  ColorTypes,
+  Modal,
 } from "./src/index";
