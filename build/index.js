@@ -43,6 +43,16 @@ function __rest(s, e) {
     return t;
 }
 
+function __spreadArray(to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+}
+
 typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
     var e = new Error(message);
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
@@ -230,6 +240,30 @@ var Text = function (_a) {
     }, [type]);
     return jsx("div", { className: cn(TextClassName, className), children: label });
 };
+
+function GridLayout(_a) {
+    var children = _a.children;
+    return (jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20 mt-16 max-w-7xl mx-auto px-4", children: children }));
+}
+function Loader(_a) {
+    var className = _a.className, _b = _a.count, count = _b === void 0 ? 3 : _b;
+    return (jsx("div", { className: "flex gap-3 justify-center mt-10 ".concat(className), children: __spreadArray([], Array(count), true).map(function (e, i) { return (jsx("div", { className: "w-1 h-1 animate-ping rounded-full bg-gray-600" }, i)); }) }));
+}
+function GridLoader(_a) {
+    var className = _a.className, _b = _a.count, count = _b === void 0 ? 12 : _b;
+    return (jsx(GridLayout, { children: __spreadArray([], Array(count), true).map(function (e, i) { return (jsx("div", { className: "rounded-md w-full h-80 md:h-56 object-fit bg-gray-200 animate-pulse ".concat(className) }, i)); }) }));
+}
+function ListLoader(_a) {
+    var className = _a.className, _b = _a.count, count = _b === void 0 ? 8 : _b;
+    return (jsx("div", { className: "grid grid-cols-1 gap-4 ".concat(className), children: __spreadArray([], Array(count), true).map(function (e, i) { return (jsx("div", { className: "rounded-md w-full h-20 md:h-16 object-fit bg-gray-200 animate-pulse" }, i)); }) }));
+}
+function FullPageLoader() {
+    return (jsx("div", { className: "fixed w-full top-0 inset-x-0 h-screen flex flex-col justify-center bg-black/60 z-50", children: jsx("div", { className: "animate-spin w-10 h-10 text-rose-400 rounded-full border-[4px] m-auto border-t-transparent border-current" }) }));
+}
+function ColorLoader(_a) {
+    var className = _a.className, _b = _a.count, count = _b === void 0 ? 3 : _b;
+    return (jsx("div", { className: "min-h-screen flex flex-col justify-center z-50", children: jsx("div", { className: "flex gap-5 items-center justify-center ".concat(className), children: __spreadArray([], Array(count), true).map(function (e, i) { return (jsx("div", { className: "w-2 h-2 animate-ping rounded-full bg-rose-600" }, i)); }) }) }));
+}
 
 var i$3=Object.defineProperty;var d$5=(t,e,n)=>e in t?i$3(t,e,{enumerable:!0,configurable:!0,writable:!0,value:n}):t[e]=n;var r$3=(t,e,n)=>(d$5(t,typeof e!="symbol"?e+"":e,n),n);let o$5 = class o{constructor(){r$3(this,"current",this.detect());r$3(this,"handoffState","pending");r$3(this,"currentId",0);}set(e){this.current!==e&&(this.handoffState="pending",this.currentId=0,this.current=e);}reset(){this.set(this.detect());}nextId(){return ++this.currentId}get isServer(){return this.current==="server"}get isClient(){return this.current==="client"}detect(){return typeof window=="undefined"||typeof document=="undefined"?"server":"client"}handoff(){this.handoffState==="pending"&&(this.handoffState="complete");}get isHandoffComplete(){return this.handoffState==="complete"}};let s$8=new o$5;
 
@@ -433,5 +467,5 @@ var ColorTypes = {
     White: 'bg-white',
 };
 
-export { Button, ButtonType, ButtonTypeStyle, ButtonVariable, ColorTypes, Modal, Text, TextInput, TextType, TextTypeStyle };
+export { Button, ButtonType, ButtonTypeStyle, ButtonVariable, ColorLoader, ColorTypes, FullPageLoader, GridLayout, GridLoader, ListLoader, Loader, Modal, Text, TextInput, TextType, TextTypeStyle };
 //# sourceMappingURL=index.js.map

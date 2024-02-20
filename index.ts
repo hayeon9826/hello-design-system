@@ -10,4 +10,10 @@ export {
   TextTypeStyle,
   ColorTypes,
   Modal,
+  GridLayout,
+  ListLoader,
+  GridLoader,
+  Loader,
+  FullPageLoader,
+  ColorLoader,
 } from "./src/index";
