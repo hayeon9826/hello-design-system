@@ -1,6 +1,6 @@
 {
   "name": "hello-design-system",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Hello Design System UI Components",
   "main": "./build/index.js",
   "author": "",
