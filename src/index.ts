@@ -15,6 +15,8 @@ export {
   FullPageLoader,
   ColorLoader,
   Modal,
+  Accordion,
+  AccordionProps,
 } from "./components";
 
 export { ColorTypes } from "./foundation";

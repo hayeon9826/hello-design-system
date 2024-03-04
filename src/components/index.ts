@@ -22,3 +22,5 @@ export {
 } from "./Loader";
 
 export { default as Modal } from "./Modal";
+
+export { default as Accordion, AccordionProps } from "./Accordion";

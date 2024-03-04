@@ -16,4 +16,6 @@ export {
   Loader,
   FullPageLoader,
   ColorLoader,
+  Accordion,
+  AccordionProps,
 } from "./src/index";

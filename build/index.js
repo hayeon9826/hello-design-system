@@ -444,6 +444,11 @@ function Modal(_a) {
     return (jsx(qe, { appear: true, show: isOpen, as: Fragment, children: jsxs(_t, { as: "div", className: "relative z-10", onClose: closeModal, children: [jsx(qe.Child, { as: Fragment, enter: "ease-out duration-300", enterFrom: "opacity-0", enterTo: "opacity-100", leave: "ease-in duration-200", leaveFrom: "opacity-100", leaveTo: "opacity-0", children: jsx("div", { className: "fixed inset-0 bg-black/25" }) }), jsx("div", { className: "fixed inset-0 overflow-y-auto", children: jsx("div", { className: "flex min-h-full items-center justify-center p-4 text-center", children: jsx(qe.Child, { as: Fragment, enter: "ease-out duration-300", enterFrom: "opacity-0 scale-95", enterTo: "opacity-100 scale-100", leave: "ease-in duration-200", leaveFrom: "opacity-100 scale-100", leaveTo: "opacity-0 scale-95", children: jsxs(_t.Panel, { className: "w-full max-w-xl transform overflow-hidden rounded-2xl bg-white p-8 text-left align-middle shadow-xl transition-all", children: [jsx("button", { className: "rounded-full p-2 hover:bg-black/5 mb-4", onClick: closeModal, children: jsx(AiOutlineClose, {}) }), jsx(_t.Title, { as: "h3", className: "text-xl md:text-2xl font-medium leading-6 text-gray-900", children: title }), children] }) }) }) })] }) }));
 }
 
+var Accordion = function (_a) {
+    var rightIcon = _a.rightIcon, title = _a.title, content = _a.content, id = _a.id;
+    return (jsxs("div", { className: "flex flex-wrap justify-start overflow-hidden text-gray-800 border-b border-gray-500", children: [jsx("label", { className: "grow px-4 py-3 font-medium", htmlFor: id, children: title }), jsx("input", { className: "peer mx-4 my-3 h-0 w-0 appearance-none rounded border text-gray-700 opacity-0", type: "checkbox", name: id, id: id }), rightIcon !== null && rightIcon !== void 0 ? rightIcon : (jsx("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24", "stroke-width": "1.5", stroke: "currentColor", className: "mx-4 my-3 h-6 w-6 transition-all duration-500 peer-checked:rotate-45", children: jsx("path", { "stroke-linecap": "round", "stroke-linejoin": "round", d: "M12 6v12m6-6H6" }) })), jsx("div", { className: "-transparent absolute -translate-y-full scale-25 scale-y-0 px-4 py-3 opacity-0 transition-all duration-500 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100 peer-checked:bg-gray-50 peer-checked:opacity-100 text-sm", children: content })] }));
+};
+
 var ColorTypes = {
     Primary50: 'bg-rose-50',
     Primary300: 'bg-rose-300',
@@ -467,5 +472,5 @@ var ColorTypes = {
     White: 'bg-white',
 };
 
-export { Button, ButtonType, ButtonTypeStyle, ButtonVariable, ColorLoader, ColorTypes, FullPageLoader, GridLayout, GridLoader, ListLoader, Loader, Modal, Text, TextInput, TextType, TextTypeStyle };
+export { Accordion, Button, ButtonType, ButtonTypeStyle, ButtonVariable, ColorLoader, ColorTypes, FullPageLoader, GridLayout, GridLoader, ListLoader, Loader, Modal, Text, TextInput, TextType, TextTypeStyle };
 //# sourceMappingURL=index.js.map

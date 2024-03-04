@@ -5,3 +5,4 @@ export { default as Text } from "./Text";
 export { TextType, TextTypeStyle } from "./Text/text.constant";
 export { GridLayout, ListLoader, GridLoader, Loader, FullPageLoader, ColorLoader, } from "./Loader";
 export { default as Modal } from "./Modal";
+export { default as Accordion, AccordionProps } from "./Accordion";
