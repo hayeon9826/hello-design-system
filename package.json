@@ -1,6 +1,6 @@
 {
   "name": "hello-design-system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hello Design System UI Components",
   "main": "./build/index.js",
   "author": "",
@@ -10,6 +10,10 @@
     "type": "git",
     "url": "https://github.com/hayeon9826/hello-design-system"
   },
+  "files": [
+    "build/**/*",
+    "src/**/*"
+  ],
   "scripts": {
     "build": "npx tailwindcss -i ./src/tailwind.css -o ./src/build.css && rollup -c",
     "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./src/build.css",

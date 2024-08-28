@@ -22,7 +22,7 @@ yarn add --dev hello-design-system
 
 ```typescript
 // app/layout.tsx
-import "hello-design-system/tailwind.build.css";
+import "hello-design-system/build.css";
 ```
 
 ### For versions below 1.0.0 (< 1.0.0)
