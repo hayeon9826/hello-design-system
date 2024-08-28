@@ -4,7 +4,7 @@ This package provides Tailwind design system components for React projects.
 
 ## Installation
 
-Ensure that you have Node.js and Tailwind CSS installed.
+Ensure that you have Node.js (>=18.17.0) and Tailwind CSS installed.
 
 ### For version 1.0.0 and above (>= 1.0.0)
 
