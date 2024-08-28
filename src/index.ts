@@ -17,6 +17,7 @@ export {
   Modal,
   Accordion,
   AccordionProps,
+  Carousel,
 } from "./components";
 
 export { ColorTypes } from "./foundation";

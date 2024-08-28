@@ -1,43 +1,49 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
+import cn from "classnames";
+import { FiPlus } from "react-icons/fi";
 
 export interface AccordionProps {
   rightIcon?: ReactNode;
   title: string;
   content: string;
   id: string;
+  defaultOpen?: boolean;
 }
 
-const Accordion = ({ rightIcon, title, content, id }: AccordionProps) => {
+const Accordion = ({
+  rightIcon,
+  title,
+  content,
+  id,
+  defaultOpen,
+}: AccordionProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(defaultOpen ?? false);
+
   return (
     <div className="flex flex-wrap justify-start overflow-hidden text-gray-800 border-b border-gray-100 bg-white">
-      <label className="grow px-4 py-3 font-medium" htmlFor={id}>
-        {title}
-      </label>
-      <input
-        className="peer mx-4 my-3 h-0 w-0 appearance-none rounded border text-gray-700 opacity-0"
-        type="checkbox"
-        name={id}
-        id={id}
-      />
-      {rightIcon ?? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="mx-4 my-3 h-6 w-6 transition-all duration-500 peer-checked:rotate-45"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 6v12m6-6H6"
+      <div
+        className="flex gap-2 justify-between w-full cursor-pointer"
+        onClick={() => setIsOpen((val) => !val)}
+      >
+        <label className="grow px-4 py-4 font-medium" htmlFor={id}>
+          {title}
+        </label>
+        {rightIcon ?? (
+          <FiPlus
+            className={cn(
+              "mx-4 my-3 h-6 w-6 transition-transform duration-300 transform",
+              {
+                "rotate-45": isOpen,
+              }
+            )}
           />
-        </svg>
-      )}
-      <div className="-transparent absolute -translate-y-1/2 scale-50 scale-y-0 px-4 py-3 opacity-0 transition-all duration-500 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100 peer-checked:bg-gray-100 peer-checked:opacity-100 text-sm">
-        {content}
+        )}
       </div>
+      {isOpen && (
+        <div className="scale-y-100 p-4 bg-gray-100 opacity-100 text-sm">
+          {content}
+        </div>
+      )}
     </div>
   );
 };

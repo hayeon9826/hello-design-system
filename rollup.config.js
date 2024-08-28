@@ -1,3 +1,4 @@
+import path from "path";
 import resolve from "@rollup/plugin-node-resolve";
 import image from "@rollup/plugin-image";
 import commonjs from "@rollup/plugin-commonjs";
@@ -5,6 +6,9 @@ import typescript from "rollup-plugin-typescript2";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import postcssUrl from "postcss-url";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
+import copy from "rollup-plugin-copy";
 
 export default {
   // entry 파일 지정
@@ -32,14 +36,23 @@ export default {
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
-      extract: false,
+      // Tailwind CSS를 빌드하고 최종 파일을 생성
+      extract: path.resolve("build/build.css"), // 절대 경로로 지정, build 폴더에 css 추가
       modules: true,
       use: ["sass"],
       plugins: [
+        tailwindcss(), // Tailwind CSS 플러그인 추가
+        autoprefixer(), // Autoprefixer 추가
         postcssUrl({
           url: "inline",
         }),
       ],
+    }),
+    copy({
+      targets: [
+        { src: "src/build.css", dest: "build" }, // 파일 복사 설정
+      ],
+      verbose: true, // 복사 과정을 로그로 표시
     }),
   ],
 };

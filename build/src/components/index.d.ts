@@ -1,5 +1,6 @@
 export { default as Button, ButtonProps } from "./Button";
 export { ButtonType, ButtonVariable, ButtonTypeStyle, } from "./Button/button.constant";
+export { default as Carousel } from "./Carousel";
 export { default as TextInput } from "./TextInput";
 export { default as Text } from "./Text";
 export { TextType, TextTypeStyle } from "./Text/text.constant";
