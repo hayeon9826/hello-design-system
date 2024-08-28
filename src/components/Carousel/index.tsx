@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import cn from "classnames";
 
-interface CarouselProps {
+export interface CarouselProps {
   className?: string;
   imageUrls: string[];
   showArrows?: boolean; // 화살표 버튼을 표시할지 여부를 결정하는 optional prop

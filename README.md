@@ -6,27 +6,6 @@ This package provides Tailwind design system components for React projects.
 
 Ensure that you have Node.js (>=18.17.0) and Tailwind CSS installed.
 
-### For version 1.0.0 and above (>= 1.0.0)
-
-1. Install the package in your project directory:
-
-```bash
-// with npm
-npm install -D hello-design-system
-
-// with yarn
-yarn add --dev hello-design-system
-```
-
-2. Import the `hello-design-system` CSS file in your root file:
-
-```typescript
-// app/layout.tsx
-import "hello-design-system/build.css";
-```
-
-### For versions below 1.0.0 (< 1.0.0)
-
 1. Install the package in your project directory:
 
 ```bash

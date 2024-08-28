@@ -6,7 +6,7 @@ export {
   ButtonTypeStyle,
 } from "./Button/button.constant";
 
-export { default as Carousel } from "./Carousel";
+export { default as Carousel, CarouselProps } from "./Carousel";
 
 export { default as TextInput } from "./TextInput";
 

@@ -18,4 +18,6 @@ export {
   ColorLoader,
   Accordion,
   AccordionProps,
+  Carousel,
+  CarouselProps,
 } from "./src/index";
