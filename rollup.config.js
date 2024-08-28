@@ -1,4 +1,5 @@
 import path from "path";
+import { fileURLToPath } from "url";
 import resolve from "@rollup/plugin-node-resolve";
 import image from "@rollup/plugin-image";
 import commonjs from "@rollup/plugin-commonjs";
@@ -8,7 +9,10 @@ import postcss from "rollup-plugin-postcss";
 import postcssUrl from "postcss-url";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
-import copy from "rollup-plugin-copy";
+
+// ESM에서 __dirname을 사용하기 위한 설정
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default {
   input: "./index.ts",
@@ -29,7 +33,6 @@ export default {
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
-      // CSS를 빌드 폴더에 저장
       extract: path.resolve(__dirname, "build/build.css"), // build 폴더에 build.css 파일로 저장
       modules: true,
       use: ["sass"],
@@ -40,12 +43,6 @@ export default {
           url: "inline",
         }),
       ],
-    }),
-    copy({
-      targets: [
-        { src: "build/build.css", dest: "build" }, // 복사 설정
-      ],
-      verbose: true,
     }),
   ],
 };
