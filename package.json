@@ -12,7 +12,8 @@
   },
   "files": [
     "build/**/*",
-    "src/**/*"
+    "src/**/*",
+    "build/build.css"
   ],
   "scripts": {
     "build": "npx tailwindcss -i ./src/tailwind.css -o ./src/build.css && rollup -c",
