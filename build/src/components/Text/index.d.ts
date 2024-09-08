@@ -4,5 +4,4 @@ export interface TextProps {
     label: string;
     className?: string;
 }
-declare const Text: ({ type, label, className }: TextProps) => import("react/jsx-runtime").JSX.Element;
-export default Text;
+export declare const Text: ({ type, label, className }: TextProps) => import("react/jsx-runtime").JSX.Element;

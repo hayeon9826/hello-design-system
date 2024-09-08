@@ -10,7 +10,7 @@ export interface AccordionProps {
   defaultOpen?: boolean;
 }
 
-const Accordion = ({
+export const Accordion = ({
   rightIcon,
   title,
   content,
@@ -47,5 +47,3 @@ const Accordion = ({
     </div>
   );
 };
-
-export default Accordion;

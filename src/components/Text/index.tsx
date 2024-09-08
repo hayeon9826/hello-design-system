@@ -8,7 +8,7 @@ export interface TextProps {
   className?: string;
 }
 
-const Text = ({ type = TextType.DESC, label, className }: TextProps) => {
+export const Text = ({ type = TextType.DESC, label, className }: TextProps) => {
   const TextClassName = useMemo(() => {
     if (type) {
       return TextTypeStyle[type];
@@ -18,5 +18,3 @@ const Text = ({ type = TextType.DESC, label, className }: TextProps) => {
 
   return <div className={cn(TextClassName, className)}>{label}</div>;
 };
-
-export default Text;

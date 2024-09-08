@@ -11,7 +11,7 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-const Button = ({
+export const Button = ({
   primary = false,
   type = ButtonType.PRIMARY_LARGE,
   label,
@@ -40,5 +40,3 @@ const Button = ({
     </button>
   );
 };
-
-export default Button;

@@ -16,6 +16,7 @@ const __dirname = path.dirname(__filename);
 
 export default {
   input: "./index.ts",
+  treeshake: true,
   output: [
     {
       dir: "build",

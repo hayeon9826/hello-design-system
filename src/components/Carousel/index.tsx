@@ -10,7 +10,7 @@ export interface CarouselProps {
   autoplayInterval?: number; // 자동 재생 시간 간격 (밀리초)
 }
 
-export default function Carousel({
+export function Carousel({
   className,
   imageUrls,
   showArrows = false,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Text from "./index";
+import { Text } from "./index";
 import { TextType } from "./text.constant";
 
 const meta = {

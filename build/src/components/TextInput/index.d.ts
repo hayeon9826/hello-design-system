@@ -4,5 +4,5 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
     type?: "success" | "error" | "default";
     message?: string;
 }
-export default function TextInput({ label, message, type, ...props }: TextInputProps): import("react/jsx-runtime").JSX.Element;
+export declare function TextInput({ label, message, type, ...props }: TextInputProps): import("react/jsx-runtime").JSX.Element;
 export {};

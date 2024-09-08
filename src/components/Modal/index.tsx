@@ -9,12 +9,7 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-export default function Modal({
-  isOpen,
-  closeModal,
-  title,
-  children,
-}: ModalProps) {
+export function Modal({ isOpen, closeModal, title, children }: ModalProps) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>

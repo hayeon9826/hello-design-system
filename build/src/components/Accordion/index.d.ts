@@ -6,5 +6,4 @@ export interface AccordionProps {
     id: string;
     defaultOpen?: boolean;
 }
-declare const Accordion: ({ rightIcon, title, content, id, defaultOpen, }: AccordionProps) => import("react/jsx-runtime").JSX.Element;
-export default Accordion;
+export declare const Accordion: ({ rightIcon, title, content, id, defaultOpen, }: AccordionProps) => import("react/jsx-runtime").JSX.Element;

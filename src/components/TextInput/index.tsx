@@ -7,7 +7,7 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   message?: string;
 }
 
-export default function TextInput({
+export function TextInput({
   label,
   message,
   type = "default",

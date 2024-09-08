@@ -7,5 +7,4 @@ export interface ButtonProps {
     className?: string;
     disabled?: boolean;
 }
-declare const Button: ({ primary, type, label, className, disabled, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
-export default Button;
+export declare const Button: ({ primary, type, label, className, disabled, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
