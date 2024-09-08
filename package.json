@@ -1,10 +1,8 @@
 {
   "name": "hello-design-system",
-  "version": "1.2.0",
+  "version": "1.1.7",
   "description": "Hello Design System UI Components",
-  "main": "./build/cjs/index.js",
-  "module": "./build/esm/index.js",
-  "types": "./build/esm/index.d.ts",
+  "main": "./build/index.js",
   "author": "",
   "license": "UNLICENSED",
   "type": "module",
@@ -14,14 +12,9 @@
   },
   "files": [
     "build/**/*",
+    "src/**/*",
     "build/build.css"
   ],
-  "exports": {
-    ".": {
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.js"
-    }
-  },
   "scripts": {
     "build": "npx tailwindcss -i ./src/tailwind.css -o ./src/build.css && rollup -c",
     "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./src/build.css",
