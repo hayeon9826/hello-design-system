@@ -19,10 +19,18 @@ export default {
   treeshake: true,
   output: [
     {
-      dir: "build",
+      dir: "build/esm",
       format: "esm",
       exports: "named",
       sourcemap: true,
+      entryFileNames: "[name].mjs",
+    },
+    {
+      dir: "build/cjs",
+      format: "cjs",
+      exports: "named",
+      sourcemap: true,
+      entryFileNames: "[name].cjs",
     },
   ],
   plugins: [
