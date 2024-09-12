@@ -40,7 +40,16 @@ export default {
     commonjs({
       include: /node_modules/,
     }),
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+          declarationDir: path.resolve(__dirname, "build/types"),
+        },
+        include: ["src/**/*"],
+      },
+    }),
     postcss({
       extract: path.resolve(__dirname, "build/build.css"), // build 폴더에 build.css 파일로 저장
       modules: true,

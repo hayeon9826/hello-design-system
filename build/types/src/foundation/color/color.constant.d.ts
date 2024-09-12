@@ -1,0 +1,22 @@
+export declare const ColorTypes: {
+    Primary50: string;
+    Primary300: string;
+    Primary400: string;
+    Primary: string;
+    Primary600: string;
+    Primary700: string;
+    Primary800: string;
+    BlackOpacity5: string;
+    BlackOpacity25: string;
+    Black: string;
+    Gray50: string;
+    Gray100: string;
+    Gray200: string;
+    Gray300: string;
+    Gray400: string;
+    Gray: string;
+    Gray700: string;
+    Gray800: string;
+    Gray900: string;
+    White: string;
+};

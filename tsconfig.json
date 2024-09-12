@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./build",
+    "declarationDir": "./build/types",
+    "outDir": "./build",
     "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/hayeon9826/hello-design-system"
   },
+  "types": "./build/types/index.d.ts",
   "files": [
     "build/**/*",
     "src/**/*",
